@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.swipe {
+    position: relative;
+    width: fit-content;
+}
+
+.swipe::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    width: 0%;
+    height: 80%;
+    background-color: rgb(9, 9, 56);
+    animation: swipe 1.5s ease-out 1s forwards;
+}
+
+h1 {
+    display: block;
+    color: rgb(9, 9, 56);
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 25px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 1.75s forwards;
+}
+
+h3 {
+    display: block;
+    color: rgb(9, 9, 56);
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 2.25s forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes swipe {
+    0% {
+        right: 100%;
+        left: 0;
+        width: 0%;
+    }
+
+    50% {
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    100% {
+        right: 0;
+        left: 100%;
+        width: 0%;
+    }
+}
+
+.meet{
+    background-color: black;
+    padding: 40px;
+    color: goldenrod;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button-link{
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: rgb(9, 9, 56);
+    color: beige;
+    border-radius: 3px;
+    font-size: 20px;
+    box-shadow: 0 .5rem 1rem rgb(9, 9, 56);
+    transition: .9s ease;
+}
+
+.button-link:hover{
+    box-shadow: none;
+    border: 2px solid rgb(9, 9, 56);
+    background-color: beige;
+    color: rgb(9, 9, 56);
+}
+
+.apply{
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    background-color: beige;
+}
+.apply h1{
+    font-size: 60px;
+    color: rgb(9, 9, 56);
+}
+.input-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.apply input{
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid rgb(9, 9, 56);
+    border-radius: 6px;
+    background-color: transparent;
+}
+.apply input::placeholder{
+    color: rgb(9, 9, 56);
+}
+
+.apply span .button-link1{
+    background-color: rgb(9, 9, 56);
+    color: beige;
+    box-shadow: 0 .5rem 1rem rgb(9, 9, 56);
+    padding: 10px 25px;
+    font-size: 15px;
+    transition: .8s ease;
+    cursor: pointer;
+}
+
+.apply span .button-link1:hover{
+    border: 2px solid rgb(9, 9, 56);
+    background-color: beige;
+    color: rgb(9, 9, 56);
+    box-shadow: none;
+}
+
+.contact{
+    background-color: beige;
+}
+
+.contact form{
+    width: 80%;
+    margin: auto;
+}
+
+.contact h11{
+    color: rgb(9, 9, 56);
+    font-size: 72px;
+    text-align: center;
+}
+
+.input-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.contact input{
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid rgb(9, 9, 56);
+    border-radius: 6px;
+    background-color: transparent;
+}
+.contact select{
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid rgb(9, 9, 56);
+    height: 50px;
+    border-radius: 6px;
+    background-color: transparent;
+}
+.contact .textarea{
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgb(9, 9, 56);
+    resize: none;
+    border-radius: 8px;
+}
+form #btn2{
+    background-color: rgb(9, 9, 56);
+    color: beige;
+    padding: 10px 20px;
+    font-size: 20px;
+    box-shadow: 0 0 1rem rgb(9, 9, 56);
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+form #btn2:hover{
+    box-shadow: none;
+}
+
+@media (max-width: 599px) {
+    .input-box{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
