@@ -6,7 +6,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
@@ -212,6 +212,21 @@ form #btn2:hover{
 }
 
 @media (max-width: 599px) {
+    *{
+        background-color: beige;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    .wrapper{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        overflow-x: hidden;
+    }
+    .wrapper h1{
+        font-size: 30px;
+    }
     .input-box{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
