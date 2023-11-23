@@ -211,9 +211,35 @@ form #btn2:hover{
     box-shadow: none;
 }
 
+.about{
+    background-color: beige;
+    color: rgb(9, 9, 56);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about p{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.about p span{
+    font-style: italic;
+    padding-top: 20px;
+    align-self: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
 @media (max-width: 599px) {
     *{
         background-color: beige;
+    }
+    .about h1{
+        font-size: 30px;
     }
     html{
         overflow-x: hidden;
